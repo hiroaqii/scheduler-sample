@@ -3,7 +3,6 @@
 
 (comment
  (repeat-task #(println (System/currentTimeMillis)) 1)
- (shutdown)
 )
 
 (def exe (Executors/newSingleThreadScheduledExecutor))
