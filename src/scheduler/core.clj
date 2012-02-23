@@ -2,6 +2,7 @@
   (:import (java.util.concurrent Executors TimeUnit)))
 
 (comment
+  ;;1分単位で実行
  (repeat-task #(println (System/currentTimeMillis)) 1)
 )
 
