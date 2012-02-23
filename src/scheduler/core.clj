@@ -1,11 +1,6 @@
 (ns scheduler.core
   (:import (java.util.concurrent Executors TimeUnit)))
 
-(comment
-  ;;1分単位で実行
- (repeat-task #(println (System/currentTimeMillis)) 1)
-)
-
 (def exe (Executors/newSingleThreadScheduledExecutor))
 
 (defn repeat-task
@@ -15,3 +10,8 @@
 
 (defn shutdown []
   (.shutdown exe))
+
+(comment
+  ;;1分単位で実行
+ (repeat-task #(println (System/currentTimeMillis)) 1)
+)
